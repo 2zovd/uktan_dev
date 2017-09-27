@@ -11,7 +11,12 @@ $(document).ready(function() {
     });
     
     $('.slider-inner').slick({
-        infinite: true
+        infinite: true,
+		autoplay: false,
+		appendArrows: '.slider-hold',
+		prevArrow: '<button class="prev-arrow"></button>',
+		nextArrow: '<button class="next-arrow"></button>'
+	
     });
 	
 });
