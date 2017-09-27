@@ -7,11 +7,14 @@ var gulp 		= require('gulp'),
 	rename		= require('gulp-rename'),
 	del			= require('del'),
 	imagemin	= require('gulp-imagemin'),
-	pngquant	= require('imagemin-pngquant');
+	pngquant	= require('imagemin-pngquant'),
+    cache       = require('gulp-cache'),
+    autoprefix  = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass())
+        .pipe(autoprefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}))
 });
@@ -20,7 +23,8 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'app/libs/slick-carousel/slick/slick.min.js'
+		'app/libs/slick-carousel/slick/slick.min.js',
+		'app/libs/bootstrap/dist/bootstrap.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -47,14 +51,18 @@ gulp.task('clean', function() {
 	return del.sync('dist');
 })
 
+gulp.task('clear', function() {
+	return cache.clearAll();
+})
+
 gulp.task('img', function() {
 	return gulp.src('app/img/**/*')
-		.pipe(imagemin({
+		.pipe(cache(imagemin({
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
-		}))
+		})))
 		.pipe(gulp.dest('dist/img'));
 });
 
