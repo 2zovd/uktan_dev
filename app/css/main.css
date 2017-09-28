@@ -196,10 +196,10 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100%;
-  background-position: 0 0;
+  background-position: 0 100%;
   display: inline-block; }
   .page-top_logo:hover, .page-top_logo:active {
-    background-position: 0 100%; }
+    background-position: 0 0; }
 
 .page-top_logo-subheading {
   display: block;
