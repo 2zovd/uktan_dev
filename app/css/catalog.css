@@ -1,0 +1,8 @@
+.page-top_catalog {
+  min-height: 215px;
+  background-image: url("../img/catalog-bg.jpg");
+  padding-bottom: 0; }
+  .page-top_catalog .page-top_content {
+    display: none; }
+  .page-top_catalog .main-header {
+    margin-bottom: 0; }

@@ -25,6 +25,9 @@ body
     background-repeat: no-repeat
     background-size: contain
     padding-bottom: 200px
+	
+.page-top_catalog
+	@extend .page-top
 
 .main-header
 	max-width: 1920px
@@ -160,7 +163,7 @@ body
 .main
     width: 100%
     padding-top: 50px
-    
+
 .content-nav
     display: flex
     justify-content: center
@@ -189,7 +192,10 @@ body
     .content-link_active
         color: #a28a7a
         border: 1px solid #d7d0ce
-        
+
+.catalog-nav
+	@extend .content-nav		
+		
 .new-title
     display: inline-block
     font-family: $main-font
@@ -403,7 +409,7 @@ h2
 	&:hover
 		border-color: #000
 		&:after
-			background-size: 50% 1px
+			background-size: 70% 1px
 		&:before
 			opacity: 1
 
@@ -785,5 +791,5 @@ h3
 		background-color: $brown
 		&:after
 			background-position: 0 100%
-
+@import 'catalog'
 @import 'media'

@@ -75,7 +75,8 @@ body {
   overflow-x: hidden;
   min-width: 320px; }
 
-.page-top {
+.page-top,
+.page-top_catalog {
   min-height: 740px;
   background-image: url("../img/slider-bg.jpg");
   background-color: #ecebf0;
@@ -541,8 +542,8 @@ h2 {
   .btn-section:hover {
     border-color: #000; }
     .btn-section:hover:after {
-      -webkit-background-size: 50% 1px;
-              background-size: 50% 1px; }
+      -webkit-background-size: 70% 1px;
+              background-size: 70% 1px; }
     .btn-section:hover:before {
       opacity: 1; }
 
@@ -976,6 +977,11 @@ h3 {
     .btn-scroll-top:hover:after {
       background-position: 0 100%; }
 
+.page-top_catalog {
+  min-height: 215px;
+  background-image: url("../img/catalog-bg.jpg");
+  padding-bottom: 0; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -1054,11 +1060,15 @@ h3 {
     width: 100%;
     max-width: 300px; }
   .new-title {
-    font-size: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 25px;
     margin-bottom: 15px; }
   h2 {
-    font-size: 2.4rem;
+    font-size: 32px;
     margin-bottom: 0; }
+  .slider-content_holder {
+    margin-top: 10px; }
   .slide:after {
     right: 50%;
     width: 150px;
@@ -1084,7 +1094,8 @@ h3 {
     background: rgba(255, 255, 255, 0.95);
     padding: 15px;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); }
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0; }
     .main-header .logo img {
       max-width: 110px;
       height: auto; }
@@ -1092,8 +1103,6 @@ h3 {
     padding-top: 150px; }
   .btn-scroll-top {
     display: none; }
-  body {
-    padding-top: 66px; }
   .logo-footer {
     padding: 25px 0;
     -webkit-box-pack: center;
