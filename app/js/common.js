@@ -19,4 +19,23 @@ $(document).ready(function() {
 	
     });
 	
+	$("a[href*='#']").mPageScroll2id({
+		autoScrollSpeed: true
+	});
+	
+	/*
+	$('.main-nav a').click(function() {
+		var scrollAttr = $(this).attr('data-index');
+		var etop = $('#' + scrollAttr).offset().top;
+		console.log(etop);
+		$('html, body').animate({
+			scrollTop: etop
+		}, 1000);
+	})
+	*/
+
+	
 });
+
+
+

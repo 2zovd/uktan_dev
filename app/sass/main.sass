@@ -25,17 +25,17 @@ body
     background-repeat: no-repeat
     background-size: contain
     padding-bottom: 200px
-    padding-top: 25px
 
 .main-header
-    max-width: 1920px
-    margin: 0 auto
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding: 0 5%
-    margin-bottom: 50px
-    
+	max-width: 1920px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 0 5%
+	margin-bottom: 100px
+	padding-top: 25px
+
 .logo
     display: inline-block
     font-family: 'Bonfire'
@@ -44,46 +44,48 @@ body
     line-height: 1.33
     
 .main-nav
-    display: flex
-    &.active
-        display: flex
-    a
-        color: $brown
-        font-size: 16px
-        line-height: 1.33
-        font-family: $main-font
-        font-weight: $regular
-        margin: 0 20px
-        padding: 7px 0
-        transition: $transition
-        background-image: linear-gradient(to right, $brown, $brown)
-        background-size: 0 1px
-        background-position: 50% 100%
-        background-repeat: no-repeat
-        &:hover
-            text-decoration: none
-            background-size: 100% 1px
-    .donatello-link
-        margin-left: 10px
-        background: #d7cecc
-        padding-left: 20px
-        padding-right: 20px
-        &:hover
-            background-color: #53c4ce
-            color: #fff
-            text-decoration: none
-            background-image: none
+	display: flex
+	&.active
+		display: flex
+	a
+		color: $brown
+		font-size: 16px
+		line-height: 1.33
+		font-family: $main-font
+		font-weight: $regular
+		margin: 0 8px
+		padding: 8px 15px
+		transition: background-size .3s ease-in-out .1s, background-color .25s ease-in-out .4s
+		background-image: linear-gradient(to right, $brown, $brown), linear-gradient(to bottom, $brown, $brown), linear-gradient(to right, $brown, $brown) ,linear-gradient(to top, $brown, $brown)
+		background-size: 1px 0, 0 1px, 1px 0, 0 1px
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%
+		background-repeat: no-repeat
+		&:hover
+			text-decoration: none
+			background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px
+	.donatello-link
+		background: #d7cecc
+		transition: $transition
+		&:hover
+			background-color: #53c4ce
+			color: #fff
+			text-decoration: none
+			background-image: none
 
 .lang-buttons
-    display: flex
-    align-items: center
-    a
-        margin: 0 10px
-        text-transform: uppercase
-        padding: 0
-        &.active
-            text-decoration: none
-            background-size: 100% 1px
+	display: flex
+	align-items: center
+	margin-left: 5px
+	a
+		margin: 0 10px
+		text-transform: uppercase
+		padding: 0
+		background-image: none
+		&:hover
+			background-image: none
+			text-decoration: underline
+		&.active
+			text-decoration: underline
             
 .page-top_content
     max-width: 500px
@@ -117,34 +119,33 @@ body
     line-height: 1.33
     
 .nav-toggle
-    display: none
-    width: 40px
-    height: 35px
-    background-image: linear-gradient(to right, #000, #000)
-    background-size: 100% 5px
-    background-repeat: no-repeat
-    background-position: 0 50%
-    background-color: transparent
-    border: none
-    outline: none
-    position: fixed
-    right: 30px
-    top: 30px
-    &:before,
-    &:after
-        content: ''
-        display: block
-        position: absolute
-        width: 100%
-        height: 5px
-        background-color: #000
-        left: 0
-        transition: all .3s
-    &:before
-        top: 0
-    &:after
-        bottom: 0
-    
+	display: none
+	width: 40px
+	height: 35px
+	background-image: linear-gradient(to right, $brown, $brown)
+	background-size: 100% 5px
+	background-repeat: no-repeat
+	background-position: 0 50%
+	background-color: transparent
+	border: none
+	outline: none
+	position: relative
+	cursor: pointer
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 5px
+		background-color: $brown
+		left: 0
+		transition: all .3s
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+
 .nav-toggle.active
     background-image: linear-gradient(to right, transparent, transparent)
     &:before
@@ -481,7 +482,7 @@ h3
 	border: 1px solid $brown
 
 .about-section
-	padding: 95px 0
+	padding: 95px 15px
 	img
 		display: block
 		margin: 0 auto
@@ -510,29 +511,32 @@ h3
 	padding: 80px 15px 150px
 	text-align: center
 	position: relative
-	background-color: rgba(255,255,255,.5)
+	background-color: rgba(0,0,0,.5)
 	img
-        width: 100%
-        height: auto
-        max-width: 360px
-        margin: 0 auto 25px
+		width: 100%
+		height: auto
+		max-width: 160px
+		margin: 0 auto 25px
+		opacity: 0.7
 	p
-        display: block
-        max-width: 500px
-        margin: 0 auto
-        padding: 0 15px
-        font-size: 14px
-        font-family: $main-font
-        color: $brown
-        font-style: italic
-        font-weight: $semibold
-        margin-bottom: 30px
+		display: block
+		max-width: 500px
+		margin: 0 auto
+		padding: 0 15px
+		font-size: 16px
+		line-height: 1.5
+		font-family: $main-font
+		color: #fff
+		font-style: italic
+		font-weight: $regular
+		margin-bottom: 30px
+		text-align: center
 
 .btn-donat
     display: inline-block
     min-width: 270px
-    background-color: rgba(255,255,255,.7)
-    box-shadow: 0 2px 10px rgba(0,0,0,.3)
+    background-color: rgba(255,255,255,.95)
+    box-shadow: 0 2px 10px rgba(0,0,0,.15)
     text-transform: uppercase
     color: #3a3227
     font-size: 14px
@@ -562,6 +566,18 @@ h3
         background-position: 0 0
         background-repeat: no-repeat
 
+.donat-title
+	display: block
+	font-size: 35px
+	line-height: 1.33
+	margin-bottom: 20px
+	color: #fff
+	font-family: $main-font
+	font-weight: 400
+	font-style: italic
+	strong
+		display: block
+
 .donatello-main_bg
 	position: absolute
 	left: 0
@@ -581,20 +597,21 @@ h3
     padding: 95px 0
 
 .contact-information
-    position: relative
-    &:after
-        content: ''
-        display: block
-        position: absolute
-        background-image: url('../img/contact-bg.jpg')
-        background-repeat: no-repeat
-        background-position: 0 0
-        background-size: contain
-        width: 200px
-        height: 150px
-        z-index: -1
-        right: 0
-        bottom: 0
+	position: relative
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background-image: url('../img/contact-bg.jpg')
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: contain
+		width: 200px
+		height: 150px
+		z-index: -1
+		right: 0
+		bottom: 0
+		opacity: 1
 
 .contact-text
     p
@@ -607,27 +624,28 @@ h3
         margin-bottom: 35px
         
 .contact-row
-    width: 100%
-    max-width: 270px
-    display: flex
-    justify-content: space-between
-    span
-        font-family: $main-font
-        font-weight: $light
-        display: inline-block
-        font-size: 16px
-        line-height: 1.5
-        color: #000
-    &.mail-row
-        margin-bottom: 15px
-    &.phone-row
-        margin-bottom: 5px
+	width: 100%
+	max-width: 270px
+	display: flex
+	justify-content: space-between
+	font-family: $main-font
+	font-weight: $regular
+	font-size: 16px
+	line-height: 1.5
+	a
+		display: inline-block
+		margin-bottom: 5px
+		color: #000
+	&.mail-row
+		margin-bottom: 15px
+	&.phone-row
+		margin-bottom: 5px
         
 .contact-title
     display: inline-block
     font-family: $main-font
     font-weight: $bold
-    font-size: 14px
+    font-size: 16px
     line-height: 1.5
     margin-right: 25px
     color: #4d3530
@@ -638,60 +656,64 @@ h3
     width: 100%
     
 .form-row
-    margin-bottom: 25px
+	margin-bottom: 25px
     
 .form-field
-    border: none
-    border-bottom: 1px solid #ccc
-    padding: 15px 0
-    padding-left: 20px
-    color: #000
-    font-family: $main-font
-    font-weight: $regular
-    font-size: 14px
-    line-height: 1.33
-    display: block
-    width: 100%
-    outline: none
-    resize: none
-    &:focus
-        border-color: #a28a7a
+	border: none
+	border-bottom: 1px solid #ccc
+	padding: 15px
+	color: #000
+	font-family: $main-font
+	font-weight: $regular
+	font-size: 14px
+	line-height: 1.33
+	display: block
+	width: 100%
+	outline: none
+	border-radius: 0
+	&:focus
+		border-color: #a28a7a
 
 .btn-submit
-    display: inline-block
-    min-width: 160px
-    background-color: transparent
-    color: #3a3227
-    font-size: 14px
-    line-height: 49px
-    font-family: $main-font
-    font-weight: $semibold 
-    padding: 0 25px
-    text-align: left
-    position: relative
-    border: 1px solid #dcd2cc
-    cursor: pointer
-    &:hover
-        color: #fff
-        background-color: $brown
-        border-color: $brown
-        &:after
-            background-position: 0 100%
-            opacity: 0.8
-    &:after
-        opacity: 0.5
-        content: ''
-        display: block
-        position: absolute
-        right: 10%
-        top: 50%
-        transform: translateY(-50%) rotate(180deg)
-        width: 16px
-        height: 11px
-        background-image: url('../img/arrows-sprite.png')
-        background-size: 100% auto
-        background-position: 0 0
-        background-repeat: no-repeat
+	display: inline-block
+	min-width: 160px
+	background-color: transparent
+	color: #3a3227
+	font-size: 14px
+	line-height: 49px
+	font-family: $main-font
+	font-weight: $semibold 
+	padding: 0 25px
+	text-align: left
+	position: relative
+	border: 1px solid #dcd2cc
+	outline: none
+	cursor: pointer
+	&:hover
+		color: #fff
+		background-color: $brown
+		border-color: $brown
+		&:after
+			background-position: 0 100%
+			opacity: 0.8
+	&:after
+		opacity: 0.5
+		content: ''
+		display: block
+		position: absolute
+		right: 10%
+		top: 50%
+		transform: translateY(-50%) rotate(180deg)
+		width: 16px
+		height: 11px
+		background-image: url('../img/arrows-sprite.png')
+		background-size: 100% auto
+		background-position: 0 0
+		background-repeat: no-repeat
+	
+.btn-submit
+	&:focus
+		border-color: #a28a7a
 
 .footer-main
     width: 100%
@@ -734,5 +756,34 @@ h3
             &:hover
                 color: #fff
                 text-decoration: underline
-    
+
+.btn-scroll-top
+	position: fixed
+	display: block
+	bottom: 15px
+	right: 15px
+	width: 50px
+	height: 50px
+	border: 1px solid #d0c6c3
+	background-color: #fff
+	z-index: 1000
+	cursor: pointer
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: transparent
+		background-image: url('../img/scroll-arrow-sprite.png')
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-position: 0 0
+		width: 16px
+		height: 9px
+	&:hover
+		background-color: $brown
+		&:after
+			background-position: 0 100%
+
 @import 'media'

@@ -5,7 +5,6 @@
     .page-top
         min-height: auto
 
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.main-nav
@@ -37,8 +36,9 @@
 			color: #fff
 			text-transform: uppercase
 			margin: 5px 15px
-			padding: 10px 0
+			padding: 10px
 			text-align: center
+			transition: $transition
 			&:hover
 				background-size: 0
 				background-color: $brown
@@ -69,7 +69,7 @@
 		font-size: 2rem
 		margin-bottom: 15px
 	h2
-		font-size: 3.2rem
+		font-size: 2.4rem
 		margin-bottom: 0
 
 	.slide
@@ -80,9 +80,30 @@
 			transform: translateX(50%)
 	.slider-content_border
 		padding: 25px 10px
-
-	
-
+	.contact-information
+		&:after
+			display: none
+	.lang-buttons
+		justify-content: center
+	.main-header
+		position: fixed
+		z-index: 100
+		left: 0
+		right: 0
+		top: 0
+		background: rgba(255,255,255,.95)
+		padding: 15px
+		box-shadow: 0 1px 5px rgba(0,0,0,.15)
+		.logo
+			img
+				max-width: 110px
+				height: auto
+	.page-top
+		padding-top: 150px
+	.btn-scroll-top
+		display: none
+	body
+		padding-top: 66px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.main
@@ -101,14 +122,22 @@
 		flex-wrap: wrap
 	.category-cart
 		min-width: 260px
-
+	.contact-information
+		margin-bottom: 50px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-    .page-top
-        background-size: 200% auto
-
-
+	.page-top
+		background-size: 200% auto
+		padding-top: 70px
+	.donatello-main
+		padding: 50px 0
+	.donatello-main_bg
+		background-image: url('../img/donatello-main-bg-mobile.jpg')
+		background-attachment: scroll
+		background-size: cover
+	.contact
+		padding-top: 50px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
