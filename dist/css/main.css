@@ -181,7 +181,7 @@ body {
 
 .page-top_content {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 150px;
   text-align: center;
   min-width: 320px; }
 
@@ -1146,8 +1146,12 @@ h3 {
 @media only screen and (max-width: 1200px) {
   .page-top, .page-top_catalog {
     min-height: auto; }
+  .page-top_catalog {
+    min-height: 200px; }
   .slider-section {
-    background-image: none; } }
+    background-image: none; }
+  .page-top_content {
+    margin-bottom: 150px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
