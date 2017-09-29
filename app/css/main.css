@@ -82,8 +82,8 @@ body {
   background-position: 50% 100%;
   position: relative;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
   padding-bottom: 200px; }
 
 .main-header {
@@ -191,7 +191,7 @@ body {
 
 .page-top_logo {
   width: 100%;
-  padding-bottom: 42.2%;
+  padding-bottom: 42.5%;
   background-image: url("../img/logo-sprite.png");
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
@@ -202,12 +202,43 @@ body {
   transition: background .1s ease .2s, -webkit-transform .3s ease-in-out 0s;
   -o-transition: transform .3s ease-in-out 0s, background .1s ease .2s;
   transition: transform .3s ease-in-out 0s, background .1s ease .2s;
-  transition: transform .3s ease-in-out 0s, background .1s ease .2s, -webkit-transform .3s ease-in-out 0s; }
-  .page-top_logo:hover, .page-top_logo:active {
-    background-position: 0 0;
-    -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-            transform: scale(0.9); }
+  transition: transform .3s ease-in-out 0s, background .1s ease .2s, -webkit-transform .3s ease-in-out 0s;
+  -webkit-animation-name: logo-anim;
+          animation-name: logo-anim;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0.2;
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7); }
+
+@-webkit-keyframes logo-anim {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes logo-anim {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
 
 .page-top_logo-subheading {
   display: block;
@@ -320,7 +351,7 @@ body {
   line-height: 1.33;
   font-weight: 700;
   color: #000;
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
   .new-title span {
     display: inline-block;
     font-weight: 300;
@@ -1192,7 +1223,7 @@ h3 {
   .new-title {
     display: block;
     font-size: 25px;
-    margin-bottom: 15px; }
+    margin-bottom: 50px; }
   h2 {
     font-size: 35px;
     margin-bottom: 0; }
