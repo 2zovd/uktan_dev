@@ -20,7 +20,8 @@ $(document).ready(function() {
     });
 	
 	$("a[href*='#']").mPageScroll2id({
-		autoScrollSpeed: true
+		autoScrollSpeed: true,
+		offset: 65
 	});
 	
 	/*

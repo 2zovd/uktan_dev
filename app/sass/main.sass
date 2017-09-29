@@ -6,16 +6,16 @@ html, body
   height: 100%
 
 body 
-    margin: 0
-    font-family: $main-font, sans-serif
-    font-weight: $light
-    font-size: 18px
-    line-height: 1.33
-    color: #000
-    background-color: #fff
-    overflow-x: hidden
-    min-width: 320px
-    
+	margin: 0
+	font-family: $main-font, sans-serif
+	font-weight: $light
+	font-size: 18px
+	line-height: 1.33
+	color: #000
+	background-color: #fff
+	overflow-x: hidden
+	min-width: 320px
+
 .page-top
     min-height: 740px
     background-image: url('../img/slider-bg.jpg')
@@ -101,16 +101,20 @@ body
     margin: 0 auto 50px
     
 .page-top_logo
-    width: 100%
-    padding-bottom: 42.2%
-    background-image: url('../img/logo-sprite.png')
-    background-repeat: no-repeat
-    background-size: 100%
-    background-position: 0 100%
-    display: inline-block
-    &:hover,
-    &:active
-        background-position: 0 0
+	width: 100%
+	padding-bottom: 42.2%
+	background-image: url('../img/logo-sprite.png')
+	background-repeat: no-repeat
+	background-size: 100%
+	background-position: 0 100%
+	display: inline-block
+	transition: transform .3s ease-in-out 0s, background .1s ease .2s
+	&:hover,
+	&:active
+		background-position: 0 0
+		transform: scale(0.9)
+
+
 
 .page-top_logo-subheading
     display: block
@@ -162,36 +166,38 @@ body
     
 .main
     width: 100%
-    padding-top: 50px
 
 .content-nav
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    margin-bottom: 75px
-    a
-        display: inline-block
-        margin: 0 10px
-        padding: 7px 15px
-        font-family: $main-font
-        font-weight: $regular
-        color: #000
-        font-size: 16px
-        line-height: 1.33
-        border: 1px solid transparent
-        transition: $transition
-        &:hover
-            border: 1px solid #d7d0ce
-    .content-nav_donatello
-        background-color: #e7e2e1
-        color: #a17331
-        &:hover
-            background-color: #53c4ce
-            color: #fff
-            border: 1px solid #53c4ce
-    .content-link_active
-        color: #a28a7a
-        border: 1px solid #d7d0ce
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin-top: 30px
+	margin-bottom: 50px
+	a
+		display: inline-block
+		margin: 0 10px
+		padding: 7px 15px
+		font-family: $main-font
+		font-weight: $regular
+		color: #000
+		font-size: 16px
+		line-height: 1.33
+		border: 1px solid transparent
+		transition: $transition
+		&:hover,
+		&.active
+			border: 1px solid rgba(162,138,122,.5)
+			color: #8d6c57
+	.content-nav_donatello
+		background-color: #e7e2e1
+		color: #a17331
+		&:hover
+			background-color: #53c4ce
+			color: #fff
+			border: 1px solid #53c4ce
+	.content-link_active
+		color: #a28a7a
+		border: 1px solid #d7d0ce
 
 .catalog-nav
 	@extend .content-nav		
@@ -233,6 +239,7 @@ body
 	background-repeat: no-repeat
 	background-position: 0 100%, 99% 5%
 	position: relative
+	padding-top: 50px
 	
 .slider-inner
 	max-width: 1170px
@@ -271,6 +278,7 @@ body
 
 .prev-arrow,
 .next-arrow
+	cursor: pointer
 	@extend .gallery-arrow
 	&:hover
 		background-color: $brown
@@ -308,10 +316,11 @@ h2
 	top: 0
 	width: 50%
 	z-index: 2
+	max-width: 500px
+	margin: 0 auto
 	img
 		width: 100%
 		height: auto
-		max-width: 500px
 
 .slider-content_holder
 	position: relative
@@ -497,7 +506,7 @@ h3
 
 .about-paragraph
 	display: block
-	font-size: 18px
+	font-size: 16px
 	line-height: 24px
 	font-family: $main-font
 	font-weight: $regular

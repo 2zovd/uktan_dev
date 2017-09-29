@@ -1,3 +1,4 @@
+
 .page-top_catalog
 	min-height: 215px
 	background-image: url('../img/catalog-bg.jpg')
@@ -7,5 +8,85 @@
 	.main-header
 		margin-bottom: 0
 
+.catalog-wrap
+	padding: 0 15px
+	padding-top: 35px
+	max-width: 1170px
+	margin: 0 auto
+
+.catalog-items
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+	border-top: 1px solid #e3e3e3
+
+.cart-wrap
+	display: inline-block
+	width: 33.3%
+	padding: 20px
+	border-left: 1px solid #e3e3e3
+	border-bottom: 1px solid #e3e3e3
+	transition: all .15s ease-in-out .1s, border .1s ease .2s
+	position: relative
+	background-color: #fff
+	z-index: 1
+	cursor: default
+	&:nth-child(3n)
+		border-right: 1px solid #e3e3e3
+	&:hover
+		transform: scale(0.9)
+		box-shadow: 0 0 45px rgba(0,0,0,.2)
+		border: 1px solid #e3e3e3
+		z-index: 10
+
 .catalog-nav
+	margin-bottom: 30px
+	display: flex
+	justify-content: center
+	a
+		margin: 0 0.5% 10px
+
+.cart_img-hold
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 25px
+	min-height: 270px
+	img
+		max-width: 300px
+		width: 100%
+		height: auto
+		margin: 0 auto
+
+.cart-title
+	display: block
+	text-align: center
+	font-size: 24px
+	font-family: $main-font
+	font-weight: $semibold
+	text-transform: uppercase
+	margin-bottom: 25px
+
+.cart-description
+	display: block
+	text-align: left
+	font-family: $main-font
+	font-weight: $light
+	font-size: 12px
+	margin-bottom: 30px
+
+.cart-info_row
+	display: block
+	text-align: left
 	
+.cart-info_title
+	display: inline-block
+	font-family: $main-font
+	font-weight: $semibold
+	font-size: 14px
+
+.cart-info_property
+	display: inline-block
+	font-family: $main-font
+	font-weight: $light
+	font-size: 14px
