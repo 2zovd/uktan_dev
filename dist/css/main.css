@@ -211,11 +211,11 @@ body {
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 0.2;
+  opacity: 0;
   -webkit-transform: scale(0.7);
       -ms-transform: scale(0.7);
           transform: scale(0.7); }
@@ -224,7 +224,7 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-    opacity: 0.2; }
+    opacity: 0; }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -234,7 +234,7 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-    opacity: 0.2; }
+    opacity: 0; }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -1231,8 +1231,8 @@ h3 {
     margin-top: 10px; }
   .slide:after {
     right: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
             transform: translateX(50%); }
