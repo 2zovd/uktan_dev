@@ -75,7 +75,7 @@ body {
   overflow-x: hidden;
   min-width: 320px; }
 
-.page-top, .page-top_catalog {
+.page-top, .page-top_catalog, .page-top_donatello {
   min-height: 740px;
   background-image: url("../img/slider-bg.jpg");
   background-color: #ecebf0;
@@ -84,7 +84,19 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: 100% auto;
           background-size: 100% auto;
-  padding-bottom: 200px; }
+  padding-bottom: 200px;
+  overflow: hidden; }
+
+.page-top_bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: #ecebf0; }
 
 .main-header {
   max-width: 1920px;
@@ -189,7 +201,7 @@ body {
   width: 82%;
   margin: 0 auto 50px; }
 
-.page-top_logo {
+.page-top_logo, .page-top_logo-donatello {
   width: 100%;
   padding-bottom: 42.5%;
   background-image: url("../img/logo-sprite.png");
@@ -800,9 +812,9 @@ h3 {
 .contact {
   padding: 95px 0; }
 
-.contact-information {
+.contact-information, .contact-information_donatello {
   position: relative; }
-  .contact-information:after {
+  .contact-information:after, .contact-information_donatello:after {
     content: '';
     display: block;
     position: absolute;
@@ -1021,6 +1033,123 @@ h3 {
     .btn-scroll-top:hover:after {
       background-position: 0 100%; }
 
+.page-top_logo-donatello {
+  background-image: url("../img/donatello-logo-full.png");
+  background-position: 50% 0;
+  -webkit-background-size: contain;
+          background-size: contain;
+  padding: 0;
+  height: 350px; }
+
+.page-top_donatello {
+  background-position: 50% 100% !important;
+  min-height: 750px;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  background-color: #fff !important;
+  background-image: url("../img/donatello-bg.jpg");
+  padding: 0; }
+  .page-top_donatello .page-top_logo-holder {
+    width: 100%; }
+
+.works {
+  padding-bottom: 100px; }
+
+.works-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.insta-box {
+  width: 320px;
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px; }
+  .insta-box:hover .insta-box_hover {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .insta-box:hover .insta-box_hover span {
+      opacity: 1; }
+  .insta-box:hover img {
+    -webkit-transform: scale(1.1) rotate(2deg) translate(-50%, -50%);
+        -ms-transform: scale(1.1) rotate(2deg) translate(-50%, -50%);
+            transform: scale(1.1) rotate(2deg) translate(-50%, -50%); }
+  .insta-box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 150%;
+    height: auto;
+    -webkit-transition: all .5s ease-in-out .25s;
+    -o-transition: all .5s ease-in-out .25s;
+    transition: all .5s ease-in-out .25s; }
+
+.insta-box_hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  -webkit-transition: all .4s ease-in-out .2s;
+  -o-transition: all .4s ease-in-out .2s;
+  transition: all .4s ease-in-out .2s;
+  background: -webkit-gradient(linear, left top, right top, from(#a8fde6), to(#a8fde6)), -webkit-gradient(linear, left top, left bottom, from(#a8fde6), color-stop(50%, #f8e0f2), to(#b1e4fe)), -webkit-gradient(linear, right top, left top, from(#b1e4ff), to(#b1e4ff)), -webkit-gradient(linear, left top, left bottom, from(#a8fde6), color-stop(50%, #f8e0f2), to(#b1e4fe));
+  background: -webkit-linear-gradient(left, #a8fde6, #a8fde6), -webkit-linear-gradient(top, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%), -webkit-linear-gradient(right, #b1e4ff, #b1e4ff), -webkit-linear-gradient(top, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%);
+  background: -o-linear-gradient(left, #a8fde6, #a8fde6), -o-linear-gradient(top, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%), -o-linear-gradient(right, #b1e4ff, #b1e4ff), -o-linear-gradient(top, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%);
+  background: linear-gradient(to right, #a8fde6, #a8fde6), linear-gradient(to bottom, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%), linear-gradient(to left, #b1e4ff, #b1e4ff), linear-gradient(to bottom, #a8fde6 0%, #f8e0f2 50%, #b1e4fe 100%);
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  -webkit-background-size: 100% 6px, 6px 100%, 100% 6px, 6px 100%;
+          background-size: 100% 6px, 6px 100%, 100% 6px, 6px 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .insta-box_hover span {
+    display: block;
+    opacity: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-transition: all 1s ease .3s;
+    -o-transition: all 1s ease .3s;
+    transition: all 1s ease .3s;
+    font-family: "Open Sans";
+    font-weight: 600; }
+
+.contact-information_donatello:after {
+  background-image: url("../img/donatello-bg-footer.jpg"); }
+
 .page-top_catalog {
   min-height: 215px;
   background-image: url("../img/catalog-bg.jpg");
@@ -1144,7 +1273,7 @@ h3 {
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .page-top, .page-top_catalog {
+  .page-top, .page-top_catalog, .page-top_donatello {
     min-height: auto; }
   .page-top_catalog {
     min-height: 200px; }
@@ -1242,7 +1371,7 @@ h3 {
             transform: translateX(50%); }
   .slider-content_border {
     padding: 25px 10px; }
-  .contact-information:after {
+  .contact-information:after, .contact-information_donatello:after {
     display: none; }
   .lang-buttons {
     -webkit-box-pack: center;
@@ -1263,7 +1392,7 @@ h3 {
     .main-header .logo img {
       max-width: 110px;
       height: auto; }
-  .page-top, .page-top_catalog {
+  .page-top, .page-top_catalog, .page-top_donatello {
     padding-top: 120px; }
   .btn-scroll-top {
     display: none; }
@@ -1308,7 +1437,7 @@ h3 {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .page-top, .page-top_catalog {
+  .page-top, .page-top_catalog, .page-top_donatello {
     -webkit-background-size: 150% auto;
             background-size: 150% auto; }
   .slider-section {
@@ -1319,7 +1448,7 @@ h3 {
             flex-wrap: wrap; }
   .category-cart {
     min-width: 260px; }
-  .contact-information {
+  .contact-information, .contact-information_donatello {
     margin-bottom: 50px; }
   .cart-wrap {
     width: 100%;
@@ -1337,7 +1466,7 @@ h3 {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .page-top, .page-top_catalog {
+  .page-top, .page-top_catalog, .page-top_donatello {
     -webkit-background-size: 200% auto;
             background-size: 200% auto; }
   .donatello-main {
@@ -1356,7 +1485,9 @@ h3 {
     display: block;
     width: 100%;
     text-align: center;
-    margin: 3px 0; } }
+    margin: 3px 0; }
+  .page-top_logo-donatello {
+    height: 200px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
