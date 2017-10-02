@@ -15,6 +15,7 @@ body
 	background-color: #fff
 	overflow-x: hidden
 	min-width: 320px
+	
 
 .page-top
 	min-height: 740px
@@ -25,9 +26,26 @@ body
 	background-repeat: no-repeat
 	background-size: 100% auto
 	padding-bottom: 200px
+	overflow: hidden
 
 .page-top_catalog
 	@extend .page-top
+
+.page-top_donatello
+	@extend .page-top
+	
+.page-top_logo-donatello
+	@extend .page-top_logo
+	
+.page-top_bg
+	position: absolute
+	z-index: -1
+	width: 100%
+	height: 100%
+	background-size: 100% auto
+	background-position: 0 0
+	background-repeat: no-repeat
+	background-color: rgba(236,235,240,1)
 
 .main-header
 	max-width: 1920px
@@ -639,6 +657,9 @@ h3
 		bottom: 0
 		opacity: 1
 
+.contact-information_donatello
+	@extend .contact-information
+	
 .contact-text
     p
         display: block
@@ -811,5 +832,9 @@ h3
 		background-color: $brown
 		&:after
 			background-position: 0 100%
+
+
+
+@import 'donatello'
 @import 'catalog'
 @import 'media'
