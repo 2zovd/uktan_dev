@@ -1034,6 +1034,14 @@ h3 {
     .btn-scroll-top:hover:after {
       background-position: 0 100%; }
 
+.white-popup {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative; }
+
 .page-top_logo-donatello {
   background-image: url("../img/donatello-logo-full.png");
   background-position: 50% 0;
